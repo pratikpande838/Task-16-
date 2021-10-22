@@ -1,0 +1,281 @@
+
+   
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+body
+{
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+
+}
+ul
+{
+    list-style-type: none;
+
+}
+a
+{
+    text-decoration: none;
+    color: #333;
+}
+h1,h2
+{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+
+}
+p
+{
+    margin: 10px 0;
+
+}
+img
+{
+    width: 100%;
+
+}
+.hidden
+{
+    visibility: hidden;
+    height: 0;
+}
+/*ShowCase*/
+.showcase
+{
+    height: 400px;
+    background-color: #84CEEB;
+    color: #254E58;
+    position: relative;
+
+}
+.showcase h1
+{
+    font-size: 40px;
+
+}
+.showcase p
+{
+    margin: 20px 0;
+
+}
+
+.showcase .grid
+{
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+.showcase-text
+{
+    animation: slideInFromLeft 1s ease-in;
+}
+.showcase-form
+{
+    position: relative;
+    top: 60px;
+    height: 450px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+.fullbox{
+    text-align: center;
+}
+.showcase-form .form-control
+{
+    margin: 30px 0;
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email']
+{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.showcase-form input:focus
+{
+    outline: none;
+}
+.showcase::before
+{
+    content: '';
+    position: absolute;
+    height: 120px;
+    bottom: -45px;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+.showcase::after
+{
+    content: '';
+    position: absolute;
+    height: 120px;
+    bottom: -140px;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    transform: skewY(0deg);
+    -webkit-transform: skewY(0deg);
+    -moz-transform: skewY(0deg);
+    -ms-transform: skewY(0deg);
+}
+
+
+/* Tablets and under */
+@media(max-width: 768px)
+{
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase
+    {
+        height: auto;
+    }
+    .showcase-text
+    {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .showcase-form
+    {
+        justify-self: center;
+        margin: auto;
+    }
+}
+
+/* Mobile */
+@media(max-width: 725px)
+{
+    .card
+    {
+        width: auto;
+    }
+}
+/*Utilities*/
+.card
+{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    align-items: center;
+}
+.btn
+{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #84CEEB;
+    color: #254E58;
+    border: none;
+    border-radius: 5px;
+}
+.btn-outline
+{
+    background-color: transparent;
+    border: 1px #254E58 solid;
+}
+.btn:hover
+{
+    transform: scale(0.98);
+}
+/* Background and Colored buttons */
+.bg-primary , .btn-primary
+{
+    background-color: #84CEEB;
+    color: #254E58;
+}
+.bg-secondary , .btn-secondary
+{
+    background-color: #1c3fa8;
+    color: #05386B;
+}
+.bg-dark , .btn-dark
+{
+    background-color: #3091b8;
+    color: #112D32;
+}
+.bg-light , .btn-light
+{
+    background-color: #ffffff;
+    color: #333;
+}
+.bg-primary a ,.btn-primary a, 
+.bg-secondary a, .btn-secondary a,
+.bg-dark a, .btn-dark a,
+.bg-light a, .btn-light a
+{
+    color: #112D32;
+}
+
+/* text sizes */
+.lead
+{
+    font-size: 20px;
+}
+.sm
+{
+    font-size: 1rem; 
+}
+.md
+{
+    font-size: 2rem; 
+}
+.lg
+{
+    font-size: 3rem; 
+}
+.xl
+{
+    font-size: 4rem; 
+}
+.text-center
+{
+    text-align: center;
+
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+.grid-3
+{
+    grid-template-columns: repeat(3, 1fr);
+}

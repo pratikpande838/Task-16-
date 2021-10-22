@@ -1,0 +1,33 @@
+body{
+    background-color:#362121;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.card {
+    color: white;
+    font-size: 3.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+.layout {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.card, .layout {
+    text-align: center;
+    position: relative;
+    top: 13rem;
+    left: 34rem;
+}
